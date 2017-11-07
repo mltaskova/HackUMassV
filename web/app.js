@@ -26,6 +26,25 @@ appId: 'WR38GHZLH6',
                         }
                 })
                 );
+
+// search.addWidget(
+//   instantsearch.widgets.toggle({
+//     container: '#filter',
+//     attributeName: 'Charging',
+//     label: 'Charging',
+//     values: {
+//       on: true,
+//       off: false
+//     }
+//     templates: {
+//       header: 'Charging'
+//     },
+//     tooltips: {
+//       format: function() {
+//         return '$' ;
+//         }
+//         }
+//   })
+// );
         
 search.start();
-        

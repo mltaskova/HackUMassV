@@ -44,7 +44,7 @@ strong
 }
 
 input {
-	margin: auto;
+	margin: 0px 2px;
 	width: 300px;
 	height: 30px;
 	font-size:28px;
@@ -61,6 +61,14 @@ a:hover
 {
 	text-decoration: none;
 }
+
+td {
+    text-align: left;
+    padding: 0px 10px;
+}
+
+td:nth-child(even){background-color: #3D3D3D;
+					color: #FFCF00}
 
 .container
 {
@@ -111,7 +119,38 @@ a:hover
 .filter
 {
 	display: inline-block;
+	padding: 0px 10px;
+	font-size: 120%;
+	font-weight:bold;
 }
+
+.filter select
+{
+	margin: 0 10px 0 0;
+}
+
+.result li table
+{
+	float: right;
+	margin: 0px 20px;
+	padding: 0px 0px;
+	font-size: 50%
+}
+
+.hit-name
+{
+	width: 500px;
+	margin: 0px 0px;
+}
+
+input[type="checkbox"] { 
+	height: 30px;
+	width: 20px;
+	float: left; 
+	margin-top: -5px;
+}
+
+
 
 /*********************************************************************************/
 /* List Styles                                                                   */
@@ -322,7 +361,7 @@ ul.contact li a.icon-rss:before
 {
 	margin: auto;
 	display: inline-block;
-	padding: 0.5em 3em;
+	padding: 2em 3em;
 	background: #3D3D3D;
 	-moz-transition: opacity 0.25s ease-in-out;
 	-webkit-transition: opacity 0.25s ease-in-out;
@@ -450,7 +489,7 @@ ul.contact li a.icon-rss:before
 	#menu-wrapper
 	{
 		background: #FFCF00;
-		height: 140px;
+		height: 250px;
 		overflow: auto;
 		text-align: center;
 	}
@@ -478,12 +517,13 @@ ul.contact li a.icon-rss:before
 	#menu ul
 	{
 		text-align: center;
-		margin: auto;
+		margin: 10px 10px;
 	}
 	
 	#menu li
 	{
 		display: inline-block;
+		text-align: center;
 	}
 	
 	#menu li a, #menu li span
@@ -786,7 +826,7 @@ ul.contact li a.icon-rss:before
   color: #FFF;
   display: block;
   width: 0px auto;
-  height: 90px;
+  height: 80px;
 }
 #grow:hover {
   height: 190px;

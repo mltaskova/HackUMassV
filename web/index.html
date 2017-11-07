@@ -39,12 +39,29 @@ Released   : 20131117
 		<div id="menu">
 			<ul>
 				<li><input id="search-input" type="text" class="input"><br></li>
-				<!-- ADD SEARCH FUNCTIONALITY!!! -->
-				<!-- <li><div align="center"><a href="#" class="button">Search</a></div></li> -->
 			</ul>
 		</div>
 		<ul>
-				<li class="filter"><input type="checkbox" name="charging"><label>Charging</label></li>
+				<li class="filter"><input class="ais-toggle--checkbox" type="checkbox" name="Solo Study"><label>Solo Study</label></li>
+				<li class="filter"><input class="ais-togglecheckbox" type="checkbox" name="Group Study"><label>Group Study</label></li>
+				<li class="filter"><input class="ais-toggle--checkbox" type="checkbox" name="Outlets"><label>Outlets</label></li>
+				<li class="filter"><input class="ais-toggle--checkbox" type="checkbox" name="Charging Stations"><label>Charging Stations</label></li>
+				<li class="filter"><input class="ais-toggle--checkbox" type="checkbox" name="Whiteboards"><label>Whiteboards</label></li>
+				<li class="filter"><input class="ais-toggle--checkbox" type="checkbox" name="SCA"><label>Student Computer Access</label></li>
+				<li class="filter"><input class="ais-toggle--checkbox" type="checkbox" name="Printers"><label>Printers</label></li>
+				<li class="filter"><select>
+				  <option value="Any">Any</option>
+				  <option value="Quiet">Quiet</option>
+				  <option value="Medium">Medium</option>
+				  <option value="Loud">Loud</option>
+				</select><label>Volume</label></li>
+				<li class="filter">
+					<input id="search-input" type="text" class="input" style="height: 20px; width: 70px; font-size: 18px">Distance
+				</li>
+		</ul>
+
+		<ul>
+			<li><div align="center"><a href="#" class="button">Search</a></div></li>
 		</ul>
 </div>
 
@@ -59,12 +76,28 @@ Released   : 20131117
 			<main>
 			    <div id="hits"></div>
 			    <div id="pagination"></div>
+			    <div id="filter"></div>
 			</main>
 
 			  <script type="text/html" id="hit-template">
 			    <div id="grow" class="hit">
-			      <li><span><p class="hit-name">{{{_highlightResult.Name.value}}}</p></span></li>
-			      <small class="hit-name">Charging: {{{Charging.value}}}</small>
+			      <li><span><p class="hit-name">{{{_highlightResult.Name.value}}}</p></span>
+			      <table>
+					  <tr>
+					    <td>Solo Study</td><td>No</td><td>Group Study</td><td>yes</td>
+					    <td>Outlets</td><td>No</td><td>Charging Stations</td><td>Yes</td>
+					  </tr>
+					   <tr>
+					    <td>Whiteboards</td><td>Yes</td><td>Computer Access</td><td>No</td>
+					    <td>Printers</td><td>No</td><td>Volume</td><td>Loud</td>
+					   </tr>	
+					   <tr>
+					   	<td>Distance</td><td>dist</td>
+					   	<td><a href="#">Get directions</a></td>
+					   </tr>
+					</table>
+					</li>
+			      <!-- <small class="hit-name">Charging: {{{Charging.value}}}</small> -->
 			    </div>
 			  </script>
 
